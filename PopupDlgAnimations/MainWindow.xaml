@@ -1,0 +1,177 @@
+﻿<Window x:Class="PopupDlgAnimations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopupDlgAnimations"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        mc:Ignorable="d"
+        Title="Popup Animations" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="75"/>
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,0">
+            <Button x:Name="showPopupButton"
+                    Content="Show"
+                    Margin="0,0,5,0"
+                    Click="showPopupButton_Click"/>
+
+            <Button x:Name="bottomToCenterButton"
+                    Content="Bottom To Center"
+                    Width="150"
+                    Margin="0,0,5,0"
+                    Click="bottomToCenterButton_Click"/>
+
+            <Button x:Name="topToCenterButton"
+                    Content="Top To Center"
+                    Width="150"
+                    Margin="0,0,5,0"
+                    Click="topToCenterButton_Click"/>
+
+            <Button x:Name="leftToCenterButton"
+                    Content="Left To Center"
+                    Width="150"
+                    Margin="0,0,5,0"
+                    Click="leftToCenterButton_Click"/>
+
+            <Button x:Name="rightToCenterButton"
+                    Content="Right To Center"
+                    Width="150"
+                    Margin="0,0,5,0"
+                    Click="rightToCenterButton_Click"/>
+        </StackPanel>
+        
+        <ScrollViewer x:Name="contentScrollViewer"
+                      Grid.Row="1">
+            <TextBlock FontSize="13" 
+                       TextWrapping="Wrap" 
+                       Margin="10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ante a justo ultricies scelerisque ut ac nunc. Duis vitae elit tristique, venenatis mi vitae, euismod eros. Donec vel ligula quis lacus tempor pellentesque. Phasellus tincidunt nisi in accumsan pretium. Nullam eu lacinia mi. Sed interdum vulputate quam a gravida. Mauris sollicitudin lacinia est eu tempor. Morbi eu bibendum libero, non egestas ligula. Nunc eget libero augue.
+                <LineBreak/>
+                <LineBreak/>
+                Praesent et elit arcu. Proin a ex sit amet enim consequat tincidunt. Praesent convallis pharetra tristique. Nulla vel faucibus mi. In quis dui eget massa dictum facilisis ac sed sapien. Duis sit amet ornare nisi, id venenatis massa. Phasellus at turpis nec velit venenatis malesuada vitae eu metus. Nullam dignissim pellentesque felis, vitae gravida eros viverra in. Pellentesque efficitur, mauris at placerat consectetur, nisl risus fermentum leo, vitae vulputate augue quam vel sapien.
+                <LineBreak/>
+                <LineBreak/>
+                In suscipit vulputate ligula quis feugiat. Vivamus pulvinar risus tellus, et efficitur mauris tristique non. Sed nec consequat mauris, non tristique risus. Nulla eget purus ut dui imperdiet vehicula. Nullam congue eros tortor, tristique elementum ante sagittis quis. Nullam nunc turpis, laoreet non venenatis id, laoreet a augue. Donec mollis, mi eu commodo mattis, felis est laoreet quam, eget viverra orci diam at elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                <LineBreak/>
+                <LineBreak/>
+                Nullam in dapibus ligula. Integer commodo euismod massa sit amet ullamcorper. Quisque tortor turpis, facilisis ut nunc vel, maximus ullamcorper magna. In sit amet ante vitae diam fringilla malesuada non quis eros. Vivamus porta elit in magna vehicula eleifend. Vivamus vel diam at metus rutrum finibus. Integer quis consequat eros. Nunc eget lectus aliquam, tempus felis nec, finibus justo. Suspendisse ultrices congue nulla sed fermentum. Sed eget lorem lacus. Integer non ipsum ligula. Praesent eu tellus a ipsum aliquet facilisis et non dolor. Integer suscipit mauris a mi placerat ultrices. Cras mattis at diam vel rhoncus. Aliquam consequat vehicula leo at imperdiet. Pellentesque cursus, leo eu finibus semper, nisi mi lobortis ante, a tristique risus augue vitae ipsum.
+                <LineBreak/>
+                <LineBreak/>
+                Proin feugiat efficitur eros, eget dictum arcu dictum in. Vivamus et lorem nec tellus efficitur blandit in id nisi. Aenean non consequat risus. Praesent faucibus vulputate pretium. Vestibulum euismod mauris mattis, blandit quam a, facilisis libero. Vivamus fringilla pharetra vehicula. Aliquam sodales id lectus et egestas. Vivamus a faucibus elit. Phasellus sit amet nulla scelerisque, pharetra ligula ut, luctus dui. In ante metus, laoreet eu purus sit amet, euismod dapibus risus. Proin quis lacus a ligula ultricies efficitur. Cras fermentum, diam eget efficitur consequat, dui augue blandit dolor, vel ultrices sapien ipsum eu est. Nam neque ante, dictum ac tempor eu, placerat in sem. Suspendisse mollis et erat sit amet dictum. In et elit sagittis, luctus turpis in, lacinia turpis.
+                <LineBreak/>
+                <LineBreak/>
+                Fusce ut metus lobortis, pretium libero sed, mattis sapien. In pretium, dui ut hendrerit luctus, nulla dolor scelerisque lorem, id efficitur quam ante et nulla. Integer mollis hendrerit sollicitudin. Integer eu metus enim. In eu quam vel justo efficitur imperdiet. Nulla porttitor interdum metus, a placerat leo tempus eu. Maecenas interdum mattis condimentum. Sed quam mauris, mollis vitae maximus at, dictum sit amet tellus. Morbi sagittis euismod erat, sed placerat turpis commodo eget. Aenean sodales posuere venenatis. Pellentesque vestibulum justo sit amet condimentum egestas.
+                <LineBreak/>
+                <LineBreak/>
+                Donec urna dui, efficitur ac cursus ut, vulputate luctus nunc. Donec arcu purus, ultrices vitae tristique vitae, porttitor sed elit. Nunc lacinia malesuada quam, vitae porttitor lacus pellentesque sed. Suspendisse commodo erat ut lacus commodo porta. Praesent eget dapibus quam. Proin gravida augue velit, nec vehicula odio consectetur hendrerit. Maecenas viverra purus orci, ac mattis risus cursus ac.
+                <LineBreak/>
+                <LineBreak/>
+                Ut iaculis ipsum ut elit ullamcorper, at finibus erat tincidunt. Phasellus vulputate eros et orci varius, sed ultrices arcu laoreet. Donec id diam elit. Cras vulputate suscipit metus vitae laoreet. Etiam malesuada porttitor mauris, sit amet scelerisque nunc faucibus vel. Nunc vel sapien ac dolor aliquet consectetur. Fusce ac ligula euismod, auctor risus vehicula, auctor lacus. Praesent pellentesque diam eget urna vehicula dapibus. Pellentesque sed justo imperdiet ante lacinia hendrerit. Praesent mattis sed massa a tristique. Etiam ut elementum mi. Nunc suscipit vestibulum metus, et consectetur justo laoreet aliquam. Fusce at massa ac arcu tempor facilisis. Maecenas vestibulum sem non nisl tempus eleifend. Vestibulum eget risus quam. Phasellus purus ex, laoreet id ex in, ultricies viverra nisl.
+                <LineBreak/>
+                <LineBreak/>
+                Duis auctor scelerisque sagittis. Praesent at nibh non mi sagittis pretium et quis risus. Sed augue est, rutrum a ante non, viverra eleifend erat. Vestibulum vel sodales metus. Sed tristique eleifend augue, vitae condimentum purus. Sed vel tincidunt velit. Ut pulvinar diam ut mauris tempus, a sodales metus mattis. Vivamus malesuada pellentesque tincidunt. Sed et augue vel augue tempus volutpat cursus eget sapien. Suspendisse auctor consequat faucibus.
+                <LineBreak/>
+                <LineBreak/>
+                Nam fermentum condimentum massa id eleifend. Quisque consequat dignissim est, ut semper velit scelerisque nec. Fusce facilisis sit amet tortor sed hendrerit. Aenean vulputate velit non interdum ultrices. Nulla laoreet vulputate sapien a ultricies. Mauris vitae justo libero. Etiam rhoncus neque nec dignissim laoreet. Pellentesque quis augue in enim congue dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Ut nibh velit, aliquet a fermentum at, viverra eget nisl. Nulla egestas porttitor fermentum. Aliquam vitae leo eget mauris hendrerit cursus. Sed at maximus justo.
+                <LineBreak/>
+                <LineBreak/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ante a justo ultricies scelerisque ut ac nunc. Duis vitae elit tristique, venenatis mi vitae, euismod eros. Donec vel ligula quis lacus tempor pellentesque. Phasellus tincidunt nisi in accumsan pretium. Nullam eu lacinia mi. Sed interdum vulputate quam a gravida. Mauris sollicitudin lacinia est eu tempor. Morbi eu bibendum libero, non egestas ligula. Nunc eget libero augue.
+                <LineBreak/>
+                <LineBreak/>
+                Praesent et elit arcu. Proin a ex sit amet enim consequat tincidunt. Praesent convallis pharetra tristique. Nulla vel faucibus mi. In quis dui eget massa dictum facilisis ac sed sapien. Duis sit amet ornare nisi, id venenatis massa. Phasellus at turpis nec velit venenatis malesuada vitae eu metus. Nullam dignissim pellentesque felis, vitae gravida eros viverra in. Pellentesque efficitur, mauris at placerat consectetur, nisl risus fermentum leo, vitae vulputate augue quam vel sapien.
+                <LineBreak/>
+                <LineBreak/>
+                In suscipit vulputate ligula quis feugiat. Vivamus pulvinar risus tellus, et efficitur mauris tristique non. Sed nec consequat mauris, non tristique risus. Nulla eget purus ut dui imperdiet vehicula. Nullam congue eros tortor, tristique elementum ante sagittis quis. Nullam nunc turpis, laoreet non venenatis id, laoreet a augue. Donec mollis, mi eu commodo mattis, felis est laoreet quam, eget viverra orci diam at elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                <LineBreak/>
+                <LineBreak/>
+                Nullam in dapibus ligula. Integer commodo euismod massa sit amet ullamcorper. Quisque tortor turpis, facilisis ut nunc vel, maximus ullamcorper magna. In sit amet ante vitae diam fringilla malesuada non quis eros. Vivamus porta elit in magna vehicula eleifend. Vivamus vel diam at metus rutrum finibus. Integer quis consequat eros. Nunc eget lectus aliquam, tempus felis nec, finibus justo. Suspendisse ultrices congue nulla sed fermentum. Sed eget lorem lacus. Integer non ipsum ligula. Praesent eu tellus a ipsum aliquet facilisis et non dolor. Integer suscipit mauris a mi placerat ultrices. Cras mattis at diam vel rhoncus. Aliquam consequat vehicula leo at imperdiet. Pellentesque cursus, leo eu finibus semper, nisi mi lobortis ante, a tristique risus augue vitae ipsum.
+                <LineBreak/>
+                <LineBreak/>
+                Proin feugiat efficitur eros, eget dictum arcu dictum in. Vivamus et lorem nec tellus efficitur blandit in id nisi. Aenean non consequat risus. Praesent faucibus vulputate pretium. Vestibulum euismod mauris mattis, blandit quam a, facilisis libero. Vivamus fringilla pharetra vehicula. Aliquam sodales id lectus et egestas. Vivamus a faucibus elit. Phasellus sit amet nulla scelerisque, pharetra ligula ut, luctus dui. In ante metus, laoreet eu purus sit amet, euismod dapibus risus. Proin quis lacus a ligula ultricies efficitur. Cras fermentum, diam eget efficitur consequat, dui augue blandit dolor, vel ultrices sapien ipsum eu est. Nam neque ante, dictum ac tempor eu, placerat in sem. Suspendisse mollis et erat sit amet dictum. In et elit sagittis, luctus turpis in, lacinia turpis.
+                <LineBreak/>
+                <LineBreak/>
+                Fusce ut metus lobortis, pretium libero sed, mattis sapien. In pretium, dui ut hendrerit luctus, nulla dolor scelerisque lorem, id efficitur quam ante et nulla. Integer mollis hendrerit sollicitudin. Integer eu metus enim. In eu quam vel justo efficitur imperdiet. Nulla porttitor interdum metus, a placerat leo tempus eu. Maecenas interdum mattis condimentum. Sed quam mauris, mollis vitae maximus at, dictum sit amet tellus. Morbi sagittis euismod erat, sed placerat turpis commodo eget. Aenean sodales posuere venenatis. Pellentesque vestibulum justo sit amet condimentum egestas.
+                <LineBreak/>
+                <LineBreak/>
+                Donec urna dui, efficitur ac cursus ut, vulputate luctus nunc. Donec arcu purus, ultrices vitae tristique vitae, porttitor sed elit. Nunc lacinia malesuada quam, vitae porttitor lacus pellentesque sed. Suspendisse commodo erat ut lacus commodo porta. Praesent eget dapibus quam. Proin gravida augue velit, nec vehicula odio consectetur hendrerit. Maecenas viverra purus orci, ac mattis risus cursus ac.
+                <LineBreak/>
+                <LineBreak/>
+                Ut iaculis ipsum ut elit ullamcorper, at finibus erat tincidunt. Phasellus vulputate eros et orci varius, sed ultrices arcu laoreet. Donec id diam elit. Cras vulputate suscipit metus vitae laoreet. Etiam malesuada porttitor mauris, sit amet scelerisque nunc faucibus vel. Nunc vel sapien ac dolor aliquet consectetur. Fusce ac ligula euismod, auctor risus vehicula, auctor lacus. Praesent pellentesque diam eget urna vehicula dapibus. Pellentesque sed justo imperdiet ante lacinia hendrerit. Praesent mattis sed massa a tristique. Etiam ut elementum mi. Nunc suscipit vestibulum metus, et consectetur justo laoreet aliquam. Fusce at massa ac arcu tempor facilisis. Maecenas vestibulum sem non nisl tempus eleifend. Vestibulum eget risus quam. Phasellus purus ex, laoreet id ex in, ultricies viverra nisl.
+                <LineBreak/>
+                <LineBreak/>
+                Duis auctor scelerisque sagittis. Praesent at nibh non mi sagittis pretium et quis risus. Sed augue est, rutrum a ante non, viverra eleifend erat. Vestibulum vel sodales metus. Sed tristique eleifend augue, vitae condimentum purus. Sed vel tincidunt velit. Ut pulvinar diam ut mauris tempus, a sodales metus mattis. Vivamus malesuada pellentesque tincidunt. Sed et augue vel augue tempus volutpat cursus eget sapien. Suspendisse auctor consequat faucibus.
+                <LineBreak/>
+                <LineBreak/>
+                Nam fermentum condimentum massa id eleifend. Quisque consequat dignissim est, ut semper velit scelerisque nec. Fusce facilisis sit amet tortor sed hendrerit. Aenean vulputate velit non interdum ultrices. Nulla laoreet vulputate sapien a ultricies. Mauris vitae justo libero. Etiam rhoncus neque nec dignissim laoreet. Pellentesque quis augue in enim congue dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Ut nibh velit, aliquet a fermentum at, viverra eget nisl. Nulla egestas porttitor fermentum. Aliquam vitae leo eget mauris hendrerit cursus. Sed at maximus justo.
+            </TextBlock>
+        </ScrollViewer>
+
+        <Grid x:Name="popupGrid"
+              Visibility="Hidden"
+              Grid.Row="1">
+            <Grid Background="FloralWhite"
+                  Opacity="0.6"/>
+
+            <Canvas Background="Transparent">
+                <Border x:Name="popupBd"
+                        Background="White" 
+                        BorderBrush="Gray"
+                        BorderThickness="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="300">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Message Title"
+                                   FontSize="20"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,5"/>
+
+                        <TextBlock Text="Would you like to continue?"
+                                   FontSize="16"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,10,0,0"
+                                    Grid.Row="2">
+                            <Button x:Name="yesButton"
+                                    Content="Yes"
+                                    Margin="0,0,10,0"
+                                    Click="yesButton_Click"/>
+
+                            <Button x:Name="noButton"
+                                    Content="No"
+                                    Click="noButton_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Canvas>
+        </Grid>
+    </Grid>
+</Window>
