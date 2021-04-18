@@ -7,10 +7,9 @@
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         mc:Ignorable="d"
         Title="Popup Animations" 
-        Height="450" 
-        Width="800"
-        WindowStartupLocation="CenterScreen"
-        WindowState="Maximized">
+        Width="1280"
+        Height="720" 
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
